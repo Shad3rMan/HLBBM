@@ -1,0 +1,22 @@
+{
+    "name": "HL",
+    "rootNamespace": "",
+    "references": [
+        "Core",
+        "VContainer",
+        "UniTask",
+        "Unity.Addressables",
+        "Unity.ResourceManager",
+        "Leopotam.EcsLite",
+        "Leopotam.EcsLite.UnityEditor.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
