@@ -1,10 +1,11 @@
-using System;
 using System.Diagnostics;
 using HL.Gameplay.Features.Core.Systems;
 using HL.Gameplay.Features.LegsMovement.Systems;
+using HL.Gameplay.Features.Player.Systems;
 using HL.Gameplay.Weapons.Systems;
 using Leopotam.EcsLite;
 using UnityEngine;
+using UnityEngine.Profiling;
 
 namespace HL.Gameplay.Features.Core
 {
@@ -22,11 +23,13 @@ namespace HL.Gameplay.Features.Core
 			_world = WorldProvider.World;
 			_systems = new EcsSystems(_world);
 			_systems.Add(new InputSystem());
-			_systems.Add(new MovementControlSystem());
-			_systems.Add(new StriderLegMovementSystem());
+			_systems.Add(new PlayerControlSystem());
 			_systems.Add(new LegAnimationSystem());
 			_systems.Add(new MovementSystem());
+			_systems.Add(new RotationSystem());
 			_systems.Add(new ShootingSystem());
+			_systems.Add(new GravitySystem());
+			_systems.Add(new CharacterMovementSystem());
 			//_systems.Add(new EmitBulletSystem());
 			_systems.Add(new TimeToLiveSystem());
 			_systems.Add(new PoolBulletSystem());
@@ -41,11 +44,13 @@ namespace HL.Gameplay.Features.Core
 
 		private void Update()
 		{
+			Profiler.BeginSample("ECS Loop", this);
 			_stopwatch.Start();
 			_systems.Run();
 			_ms = _stopwatch.ElapsedMilliseconds;
 			_stopwatch.Stop();
 			_stopwatch.Reset();
+			Profiler.EndSample();
 		}
 
 		private void OnDrawGizmos()
@@ -55,7 +60,7 @@ namespace HL.Gameplay.Features.Core
 
 		private void OnGUI()
 		{
-			GUILayout.Label(_ms.ToString());
+			GUILayout.Label((_ms * 1000).ToString("F"));
 		}
 
 		private void OnDestroy()

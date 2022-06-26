@@ -1,6 +1,7 @@
 using HL.Gameplay.Features.Core.Components;
 using Leopotam.EcsLite;
 using UnityEngine;
+using CharacterController = HL.Gameplay.Features.Core.Components.CharacterController;
 
 namespace HL.Gameplay.Features.Core.Systems
 {
@@ -14,7 +15,7 @@ namespace HL.Gameplay.Features.Core.Systems
 		public void Init(EcsSystems systems)
 		{
 			_world = systems.GetWorld();
-			_filter = _world.Filter<TransformComponent>().Inc<Movement>().End();
+			_filter = _world.Filter<TransformComponent>().Inc<Movement>().Exc<CharacterController>().End();
 			_transformsPool = _world.GetPool<TransformComponent>();
 			_movePool = _world.GetPool<Movement>();
 		}
@@ -26,7 +27,7 @@ namespace HL.Gameplay.Features.Core.Systems
 				ref var transform = ref _transformsPool.Get(id);
 				ref var move = ref _movePool.Get(id);
 
-				transform.Value.position += new Vector3(move.Direction.x, move.Direction.y) * move.Speed;
+				transform.Value.Translate(move.Value);
 			}
 		}
 	}

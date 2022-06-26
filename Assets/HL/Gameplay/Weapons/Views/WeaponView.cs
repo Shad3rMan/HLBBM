@@ -2,6 +2,7 @@ using HL.Gameplay.Features.Core;
 using HL.Gameplay.Features.Core.Components;
 using HL.Gameplay.Weapons.Components;
 using UnityEngine;
+using Input = HL.Gameplay.Features.Core.Components.Input;
 
 namespace HL.Gameplay.Weapons.Views
 {
@@ -20,7 +21,7 @@ namespace HL.Gameplay.Weapons.Views
 			weapon.Capacity = _capacity;
 			weapon.BulletPrefab = _bulletPrefab;
 			weapon.ShootingRoot = _shootingRoot;
-			Add<InputComponent>();
+			Add<Input>();
 		}
 	}
 }

@@ -67,8 +67,7 @@ namespace HL.Gameplay.Weapons.Systems
 					tr.Value.position = emit.Position;
 					bullet.View.gameObject.SetActive(true);
 					ref var move = ref _movePool.Add(pooledBulletEntity);
-					move.Direction = emit.Direction;
-					move.Speed = emit.Speed;
+					move.Value = emit.Direction * emit.Speed;
 					ref var ttl = ref _ttlPool.Add(pooledBulletEntity);
 					ttl.Done = false;
 					ttl.Elapsed = 1;

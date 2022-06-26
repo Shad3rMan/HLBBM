@@ -1,5 +1,4 @@
 using HL.Gameplay.Features.LegsMovement.Components;
-using HL.Gameplay.Features.Strider.Components;
 using Leopotam.EcsLite;
 using UnityEngine;
 

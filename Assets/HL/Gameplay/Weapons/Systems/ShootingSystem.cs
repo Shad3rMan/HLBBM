@@ -2,6 +2,7 @@ using HL.Gameplay.Features.Core.Components;
 using HL.Gameplay.Weapons.Components;
 using Leopotam.EcsLite;
 using UnityEngine;
+using Input = HL.Gameplay.Features.Core.Components.Input;
 
 namespace HL.Gameplay.Weapons.Systems
 {
@@ -9,15 +10,15 @@ namespace HL.Gameplay.Weapons.Systems
 	{
 		private EcsWorld _world;
 		private EcsFilter _filter;
-		private EcsPool<InputComponent> _inputPool;
+		private EcsPool<Input> _inputPool;
 		private EcsPool<Weapon> _weaponPool;
 		private EcsPool<EmitBulletEvent> _emitPool;
 
 		public void Init(EcsSystems systems)
 		{
 			_world = systems.GetWorld();
-			_filter = _world.Filter<InputComponent>().Inc<Weapon>().End();
-			_inputPool = _world.GetPool<InputComponent>();
+			_filter = _world.Filter<Input>().Inc<Weapon>().End();
+			_inputPool = _world.GetPool<Input>();
 			_weaponPool = _world.GetPool<Weapon>();
 			_emitPool = _world.GetPool<EmitBulletEvent>();
 		}
