@@ -876,6 +876,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 784565420642996458}
     m_Modifications:
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8508690697080748130, guid: dcbf59da08760fb4b9531995a6691a6f,
         type: 3}
       propertyPath: m_Name
@@ -936,6 +981,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcbf59da08760fb4b9531995a6691a6f, type: 3}
 --- !u!1 &2845050119745045679 stripped
@@ -958,7 +1018,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -984,7 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -1010,7 +1070,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -1036,7 +1096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -1455,6 +1515,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 784565420642996458}
     m_Modifications:
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8508690697080748130, guid: dcbf59da08760fb4b9531995a6691a6f,
         type: 3}
       propertyPath: m_Name
@@ -1515,6 +1620,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcbf59da08760fb4b9531995a6691a6f, type: 3}
 --- !u!1 &2845050119492790967 stripped
@@ -1537,7 +1657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -1563,7 +1683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -1589,7 +1709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -1615,7 +1735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -2109,6 +2229,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 784565420642996458}
     m_Modifications:
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8508690697080748130, guid: dcbf59da08760fb4b9531995a6691a6f,
         type: 3}
       propertyPath: m_Name
@@ -2169,6 +2334,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcbf59da08760fb4b9531995a6691a6f, type: 3}
 --- !u!1 &2845050121381639442 stripped
@@ -2191,7 +2371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -2217,7 +2397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -2243,7 +2423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -2269,7 +2449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -2598,6 +2778,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 784565420642996458}
     m_Modifications:
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 77746115464127593, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4771808498262584943, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805683081632483037, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8508690697080748130, guid: dcbf59da08760fb4b9531995a6691a6f,
         type: 3}
       propertyPath: m_Name
@@ -2658,6 +2883,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_ShadowRadius
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8645315344430663727, guid: dcbf59da08760fb4b9531995a6691a6f,
+        type: 3}
+      propertyPath: m_Shadows.m_Strength
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcbf59da08760fb4b9531995a6691a6f, type: 3}
 --- !u!1 &2845050121267533439 stripped
@@ -2680,7 +2920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -2706,7 +2946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -2732,7 +2972,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
@@ -2758,7 +2998,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 1
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: 1
   m_LightLayerMask: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1

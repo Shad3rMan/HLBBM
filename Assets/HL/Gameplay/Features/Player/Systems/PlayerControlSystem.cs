@@ -30,7 +30,7 @@ namespace HL.Gameplay.Features.Player.Systems
 				ref var move = ref _movePool.Get(entity);
 				ref var rotate = ref _rotatePool.Get(entity);
 
-				move.Value = input.Move;
+				move.Value = input.Move * 10 * (input.Run ? 2 : 1);
 				rotate.Value = new Vector3(0, input.MouseDelta.x, 0);
 			}
 		}

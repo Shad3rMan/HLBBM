@@ -23,12 +23,13 @@ namespace HL.Gameplay.Features.Core.Systems
 			{
 				ref var input = ref _inputPool.Get(entity);
 				input.Move = new Vector3(UnityEngine.Input.GetAxis("Horizontal"), 0, UnityEngine.Input.GetAxis("Vertical"));
-				input.MouseDelta = UnityEngine.Input.mousePosition - input.MousePosition;
+				input.MouseDelta = new Vector2(UnityEngine.Input.GetAxis("Mouse X"), UnityEngine.Input.GetAxis("Mouse Y"));
 				input.MousePosition = UnityEngine.Input.mousePosition;
 				input.Action = UnityEngine.Input.GetKeyDown(KeyCode.E);
 				input.Jump = UnityEngine.Input.GetKeyDown(KeyCode.Space);
 				input.Shoot = UnityEngine.Input.GetMouseButton(0);
 				input.AltShoot = UnityEngine.Input.GetMouseButton(1);
+				input.Run = UnityEngine.Input.GetKey(KeyCode.LeftShift);
 			}
 		}
 	}
