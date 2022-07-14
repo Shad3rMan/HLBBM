@@ -1,3 +1,4 @@
+using HL.Gameplay.Features.Core.Config;
 using Leopotam.EcsLite;
 using UnityEngine;
 using Input = HL.Gameplay.Features.Core.Components.Input;
@@ -6,9 +7,15 @@ namespace HL.Gameplay.Features.Core.Systems
 {
 	public class InputSystem : IEcsInitSystem, IEcsRunSystem
 	{
+		private readonly InputConfig _config;
 		private EcsWorld _world;
 		private EcsFilter _filter;
 		private EcsPool<Input> _inputPool;
+
+		public InputSystem(InputConfig config)
+		{
+			_config = config;
+		}
 
 		public void Init(EcsSystems systems)
 		{
@@ -22,14 +29,16 @@ namespace HL.Gameplay.Features.Core.Systems
 			foreach (var entity in _filter)
 			{
 				ref var input = ref _inputPool.Get(entity);
-				input.Move = new Vector3(UnityEngine.Input.GetAxis("Horizontal"), 0, UnityEngine.Input.GetAxis("Vertical"));
-				input.MouseDelta = new Vector2(UnityEngine.Input.GetAxis("Mouse X"), UnityEngine.Input.GetAxis("Mouse Y"));
+				input.Move = new Vector3(UnityEngine.Input.GetAxis(_config.HorizontalAxis),
+					UnityEngine.Input.GetAxis(_config.VerticalAxis));
+				input.MouseDelta = new Vector2(UnityEngine.Input.GetAxis(_config.MouseX),
+					UnityEngine.Input.GetAxis(_config.MouseY));
 				input.MousePosition = UnityEngine.Input.mousePosition;
-				input.Action = UnityEngine.Input.GetKeyDown(KeyCode.E);
-				input.Jump = UnityEngine.Input.GetKeyDown(KeyCode.Space);
-				input.Shoot = UnityEngine.Input.GetMouseButton(0);
-				input.AltShoot = UnityEngine.Input.GetMouseButton(1);
-				input.Run = UnityEngine.Input.GetKey(KeyCode.LeftShift);
+				input.Action = UnityEngine.Input.GetKeyDown(_config.ActionKey);
+				input.Jump = UnityEngine.Input.GetKeyDown(_config.JumpKey);
+				input.Shoot = UnityEngine.Input.GetKey(_config.FireKey);
+				input.AltShoot = UnityEngine.Input.GetKey(_config.AlternateFireKey);
+				input.Run = UnityEngine.Input.GetKey(_config.RunKey);
 			}
 		}
 	}

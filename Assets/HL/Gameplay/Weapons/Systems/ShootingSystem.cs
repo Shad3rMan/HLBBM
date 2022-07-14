@@ -37,7 +37,7 @@ namespace HL.Gameplay.Weapons.Systems
 					emit.BulletView = weapon.BulletPrefab;
 					emit.Count = 1;
 					emit.Position = emitPosition;
-					emit.Direction = (Camera.main.ScreenToWorldPoint(input.MousePosition) - emitPosition).normalized;
+					emit.Direction = (UnityEngine.Camera.main.ScreenToWorldPoint(input.MousePosition) - emitPosition).normalized;
 					emit.Speed = 2;
 				}
 			}

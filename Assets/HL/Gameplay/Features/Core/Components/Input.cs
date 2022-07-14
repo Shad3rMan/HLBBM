@@ -4,8 +4,8 @@ namespace HL.Gameplay.Features.Core.Components
 {
 	public struct Input
 	{
-		public Vector3 Move;
-		public Vector3 MousePosition;
+		public Vector2 Move;
+		public Vector2 MousePosition;
 		public Vector2 MouseDelta;
 		public bool Shoot;
 		public bool AltShoot;
