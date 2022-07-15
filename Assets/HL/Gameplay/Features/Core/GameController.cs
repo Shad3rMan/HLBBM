@@ -40,7 +40,7 @@ namespace HL.Gameplay.Features.Core
 			//_systems.Add(new EmitBulletSystem());
 			_systems.Add(new TimeToLiveSystem());
 			_systems.Add(new PoolBulletSystem());
-			_systems.Add(new PlayerHeadControlSystem());
+			_systems.Add(new PlayerHeadControlSystem(_playerConfig));
 #if UNITY_EDITOR
 			_systems.Add(new Leopotam.EcsLite.UnityEditor.EcsWorldDebugSystem());
 #endif
