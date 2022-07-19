@@ -23,14 +23,14 @@
 ///////////////////////////////////////////////////////////////////////////////
 half3 LightingLambert(half3 lightColor, half3 lightDir, half3 normal)
 {
-    half NdotL = saturate(dot(normal, lightDir) * 0.5 + 0.5);
+    half NdotL = pow(dot(normal, lightDir) * 0.5 + 0.5, 2);
     return lightColor * NdotL;
 }
 
 half3 LightingSpecular(half3 lightColor, half3 lightDir, half3 normal, half3 viewDir, half4 specular, half smoothness)
 {
     float3 halfVec = SafeNormalize(float3(lightDir) + float3(viewDir));
-    half NdotH = half(saturate(dot(normal, halfVec) * 0.5 + 0.5));
+    half NdotH = half(pow(dot(normal, halfVec) * 0.5 + 0.5, 2));
     half modifier = pow(NdotH, smoothness);
     half3 specularReflection = specular.rgb * modifier;
     return lightColor * specularReflection;
@@ -41,7 +41,7 @@ half3 LightingPhysicallyBased(BRDFData brdfData, BRDFData brdfDataClearCoat,
     half3 normalWS, half3 viewDirectionWS,
     half clearCoatMask, bool specularHighlightsOff)
 {
-    half NdotL = saturate(dot(normalWS, lightDirectionWS) * 0.5 + 0.5);
+    half NdotL = pow(dot(normalWS, lightDirectionWS) * 0.5 + 0.5, 2);
     half3 radiance = lightColor * (lightAttenuation * NdotL);
 
     half3 brdf = brdfData.diffuse;

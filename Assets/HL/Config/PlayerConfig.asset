@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _sprintSpeed: 20
-  _verticalSensitivity: 20
-  _horizontalSensitivity: 5
+  _verticalSensitivity: 5
+  _horizontalSensitivity: 10

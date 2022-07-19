@@ -37,7 +37,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   m_Settings:
-    technique: 0
+    technique: 2
     maxDrawDistance: 100
     dBufferSettings:
       surfaceData: 2
@@ -65,7 +65,7 @@ MonoBehaviour:
   - {fileID: -3232913149409217983}
   - {fileID: -5617783585068157339}
   m_RendererFeatureMap: 4132c68b9e6222d365f6fdfa979f09b2
-  m_UseNativeRenderPass: 1
+  m_UseNativeRenderPass: 0
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   shaders:
     blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
