@@ -1,6 +1,5 @@
 using HL.Gameplay.Features.Core;
 using HL.Gameplay.Features.Core.Components;
-using CharacterController = HL.Gameplay.Features.Core.Components.CharacterController;
 using Input = HL.Gameplay.Features.Core.Components.Input;
 
 namespace HL.Gameplay.Features.Player.Views
@@ -9,11 +8,12 @@ namespace HL.Gameplay.Features.Player.Views
 	{
 		protected override void Initialize()
 		{
-			Add<CharacterController>().Value = GetComponent<UnityEngine.CharacterController>();
+			Add<RigidbodyComponent>().Value = GetComponent<UnityEngine.Rigidbody>();
+			Add<ColliderComponent>().Value = GetComponent<UnityEngine.Collider>();
 			Add<Input>();
-			Add<Movement>();
-			Add<Rotation>();
-			Add<Gravity>().Value = -9.8f;
+			//Add<Movement>();
+			//Add<Rotation>();
+			//Add<Gravity>().Value = -9.8f;
 		}
 	}
 }

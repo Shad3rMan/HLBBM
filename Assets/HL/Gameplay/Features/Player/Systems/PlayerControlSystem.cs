@@ -13,8 +13,7 @@ namespace HL.Gameplay.Features.Player.Systems
 		private EcsWorld _world;
 		private EcsFilter _filter;
 		private EcsPool<Input> _inputPool;
-		private EcsPool<Movement> _movePool;
-		private EcsPool<Rotation> _rotatePool;
+		private EcsPool<RigidbodyComponent> _rigidbodyPool;
 
 		public PlayerControlSystem(PlayerConfig config)
 		{
@@ -24,10 +23,9 @@ namespace HL.Gameplay.Features.Player.Systems
 		public void Init(EcsSystems systems)
 		{
 			_world = systems.GetWorld();
-			_filter = _world.Filter<Input>().Inc<CharacterController>().Inc<Components.Player>().End();
+			_filter = _world.Filter<Input>().Inc<RigidbodyComponent>().Inc<Components.Player>().End();
 			_inputPool = _world.GetPool<Input>();
-			_movePool = _world.GetPool<Movement>();
-			_rotatePool = _world.GetPool<Rotation>();
+			_rigidbodyPool = _world.GetPool<RigidbodyComponent>();
 		}
 
 		public void Run(EcsSystems systems)
@@ -35,12 +33,10 @@ namespace HL.Gameplay.Features.Player.Systems
 			foreach (var entity in _filter)
 			{
 				var input = _inputPool.Get(entity);
-				ref var move = ref _movePool.Get(entity);
-				ref var rotate = ref _rotatePool.Get(entity);
+				ref var rb = ref _rigidbodyPool.Get(entity);
 
 				var speed = (input.Run ? _config.SprintSpeed : _config.MoveSpeed) * input.Move;
-				move.Value = new Vector3(speed.x, move.Value.y, speed.y);
-				rotate.Value = new Vector3(0, input.MouseDelta.x * _config.HorizontalSensitivity, 0);
+				rb.Value.velocity = new Vector3(speed.x, 0, speed.y);
 			}
 		}
 	}

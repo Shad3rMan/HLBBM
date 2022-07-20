@@ -19,9 +19,9 @@ MonoBehaviour:
     AfterOpaque: 0
     Source: 0
     NormalSamples: 0
-    Intensity: 0.1
+    Intensity: 0.2
     DirectLightingStrength: 1
-    Radius: 0.1
+    Radius: 0.15
     SampleCount: 4
 --- !u!114 &-3232913149409217983
 MonoBehaviour:
@@ -64,8 +64,9 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: -3232913149409217983}
   - {fileID: -5617783585068157339}
-  m_RendererFeatureMap: 4132c68b9e6222d365f6fdfa979f09b2
-  m_UseNativeRenderPass: 0
+  - {fileID: 8272689864834340335}
+  m_RendererFeatureMap: 4132c68b9e6222d365f6fdfa979f09b2efd56cfa997fce72
+  m_UseNativeRenderPass: 1
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   shaders:
     blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
@@ -96,10 +97,24 @@ MonoBehaviour:
     passOperation: 2
     failOperation: 0
     zFailOperation: 0
-  m_ShadowTransparentReceive: 1
+  m_ShadowTransparentReceive: 0
   m_RenderingMode: 0
-  m_DepthPrimingMode: 1
+  m_DepthPrimingMode: 0
   m_AccurateGbufferNormals: 1
   m_ClusteredRendering: 0
   m_TileSize: 32
   m_IntermediateTextureMode: 1
+--- !u!114 &8272689864834340335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e32e72b6a3f58a24c9033e2b9275eea0, type: 3}
+  m_Name: ScreenSpaceShadows
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  m_Shader: {fileID: 4800000, guid: 0f854b35a0cf61a429bd5dcfea30eddd, type: 3}

@@ -10,7 +10,7 @@ namespace HL.Gameplay.Features.LegsMovement.Systems
 		private EcsFilter _filter;
 		private EcsPool<LegComponent> _legs;
 		private EcsPool<LegAnimationComponent> _anims;
-		private RaycastHit2D[] _hitResults;
+		private RaycastHit[] _hitResults;
 
 		public void Init(EcsSystems systems)
 		{
@@ -18,7 +18,7 @@ namespace HL.Gameplay.Features.LegsMovement.Systems
 			_filter = _world.Filter<LegComponent>().Exc<LegAnimationComponent>().End();
 			_legs = _world.GetPool<LegComponent>();
 			_anims = _world.GetPool<LegAnimationComponent>();
-			_hitResults = new RaycastHit2D[1];
+			_hitResults = new RaycastHit[1];
 		}
 
 		public void Run(EcsSystems systems)
@@ -30,7 +30,7 @@ namespace HL.Gameplay.Features.LegsMovement.Systems
 				leg.DesiredPosition = rootPosition + leg.ProjectedOffset;
 				var dir = (leg.DesiredPosition - leg.FixedPosition).normalized;
 				leg.DesiredPosition += dir * (leg.StepDistance / 2);
-				if (Physics2D.RaycastNonAlloc(leg.DesiredPosition + Vector3.up * 10, Vector2.down, _hitResults, 20) > 0)
+				if (Physics.RaycastNonAlloc(leg.DesiredPosition + Vector3.up * 10, Vector2.down, _hitResults, 20) > 0)
 				{
 					leg.DesiredPosition = _hitResults[0].point;
 				}

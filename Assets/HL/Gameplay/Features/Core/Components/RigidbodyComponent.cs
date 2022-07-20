@@ -4,6 +4,6 @@ namespace HL.Gameplay.Features.Core.Components
 {
 	public struct RigidbodyComponent
 	{
-		public Rigidbody2D Rigidbody;
+		public Rigidbody Value;
 	}
 }

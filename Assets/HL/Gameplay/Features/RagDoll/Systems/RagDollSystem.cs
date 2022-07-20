@@ -26,8 +26,8 @@ namespace HL.Gameplay.Features.RagDoll.Systems
 
 				if (!rd.Initialized)
 				{
-					rb.Rigidbody.simulated = false;
-					c.Collider.enabled = false;
+					rb.Value.isKinematic = false;
+					c.Value.enabled = false;
 				}
 			}
 		}
@@ -41,8 +41,8 @@ namespace HL.Gameplay.Features.RagDoll.Systems
 				{
 					var rb = _rigidbodyPool.Get(entity);
 					var c = _colliderPool.Get(entity);
-					rb.Rigidbody.simulated = true;
-					c.Collider.enabled = true;
+					rb.Value.isKinematic = true;
+					c.Value.enabled = true;
 					rd.Initialized = true;
 				}
 			}
