@@ -36,6 +36,7 @@ namespace HL.Gameplay.Features.Player.Systems
 				var input = _inputPool.Get(entity);
 
 				tr.Value.Rotate(tr.Value.right, -input.MouseDelta.y * _config.VerticalSensitivity, Space.World);
+				tr.Value.RotateAround(tr.Value.position, Vector3.up, input.MouseDelta.x * _config.HorizontalSensitivity);
 			}
 		}
 	}

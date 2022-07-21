@@ -14,6 +14,7 @@ namespace HL.Gameplay.Features.Player.Systems
 		private EcsFilter _filter;
 		private EcsPool<Input> _inputPool;
 		private EcsPool<RigidbodyComponent> _rigidbodyPool;
+		private EcsPool<Components.Player> _playerPool;
 
 		public PlayerControlSystem(PlayerConfig config)
 		{
@@ -26,6 +27,7 @@ namespace HL.Gameplay.Features.Player.Systems
 			_filter = _world.Filter<Input>().Inc<RigidbodyComponent>().Inc<Components.Player>().End();
 			_inputPool = _world.GetPool<Input>();
 			_rigidbodyPool = _world.GetPool<RigidbodyComponent>();
+			_playerPool = _world.GetPool<Components.Player>();
 		}
 
 		public void Run(EcsSystems systems)
@@ -34,9 +36,10 @@ namespace HL.Gameplay.Features.Player.Systems
 			{
 				var input = _inputPool.Get(entity);
 				ref var rb = ref _rigidbodyPool.Get(entity);
+				ref var player = ref _playerPool.Get(entity);
 
 				var speed = (input.Run ? _config.SprintSpeed : _config.MoveSpeed) * input.Move;
-				rb.Value.velocity = new Vector3(speed.x, 0, speed.y);
+				rb.Value.AddForce(player.Head.rotation * new Vector3(speed.x, 0, speed.y), ForceMode.Force);
 			}
 		}
 	}
