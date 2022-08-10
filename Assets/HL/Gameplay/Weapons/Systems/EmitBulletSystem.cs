@@ -20,7 +20,7 @@ namespace HL.Gameplay.Weapons.Systems
 		private EcsPool<TransformComponent> _transformPool;
 		private EcsPool<TimeToLive> _ttlPool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_emitFilter = _world.Filter<EmitBulletEvent>().End();
@@ -47,7 +47,7 @@ namespace HL.Gameplay.Weapons.Systems
 			}
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _emitFilter)
 			{

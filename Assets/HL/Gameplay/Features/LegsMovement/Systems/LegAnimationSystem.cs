@@ -11,7 +11,7 @@ namespace HL.Gameplay.Features.LegsMovement.Systems
 		private EcsPool<LegComponent> _legs;
 		private EcsPool<LegAnimationComponent> _anims;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<LegComponent>().Inc<LegAnimationComponent>().End();
@@ -19,7 +19,7 @@ namespace HL.Gameplay.Features.LegsMovement.Systems
 			_anims = _world.GetPool<LegAnimationComponent>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

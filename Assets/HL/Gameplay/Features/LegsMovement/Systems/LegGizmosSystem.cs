@@ -10,14 +10,14 @@ namespace HL.Gameplay.Features.LegsMovement.Systems
 		private EcsFilter _filter;
 		private EcsPool<LegComponent> _legs;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<LegComponent>().End();
 			_legs = _world.GetPool<LegComponent>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var id in _filter)
 			{

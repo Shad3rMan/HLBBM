@@ -12,7 +12,7 @@ namespace HL.Gameplay.Features.LegsMovement.Systems
 		private EcsPool<LegAnimationComponent> _anims;
 		private RaycastHit[] _hitResults;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<LegComponent>().Exc<LegAnimationComponent>().End();
@@ -21,7 +21,7 @@ namespace HL.Gameplay.Features.LegsMovement.Systems
 			_hitResults = new RaycastHit[1];
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

@@ -10,14 +10,14 @@ namespace HL.Gameplay.Features.Core.Systems
 		private EcsFilter _filter;
 		private EcsPool<TimeToLive> _ttlPool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<TimeToLive>().End();
 			_ttlPool = _world.GetPool<TimeToLive>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

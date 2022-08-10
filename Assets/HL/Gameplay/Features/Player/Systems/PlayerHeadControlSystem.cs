@@ -20,7 +20,7 @@ namespace HL.Gameplay.Features.Player.Systems
 			_config = config;
 		}
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<Components.Player>().Inc<Head>().End(1);
@@ -28,7 +28,7 @@ namespace HL.Gameplay.Features.Player.Systems
 			_inputPool = _world.GetPool<Input>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

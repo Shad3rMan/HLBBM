@@ -11,7 +11,7 @@ namespace HL.Gameplay.Features.Core.Systems
 		private EcsPool<Movement> _movePool;
 		private EcsPool<Gravity> _gravityPool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<Movement>().Inc<Gravity>().End();
@@ -19,7 +19,7 @@ namespace HL.Gameplay.Features.Core.Systems
 			_gravityPool = _world.GetPool<Gravity>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

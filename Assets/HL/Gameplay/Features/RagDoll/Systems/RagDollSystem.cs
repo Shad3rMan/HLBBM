@@ -12,7 +12,7 @@ namespace HL.Gameplay.Features.RagDoll.Systems
 		private EcsPool<RigidbodyComponent> _rigidbodyPool;
 		private EcsPool<ColliderComponent> _colliderPool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<RigidbodyComponent>().Inc<ColliderComponent>()
@@ -32,7 +32,7 @@ namespace HL.Gameplay.Features.RagDoll.Systems
 			}
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

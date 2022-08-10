@@ -13,7 +13,7 @@ namespace HL.Gameplay.Features.Player.Systems
 		private EcsPool<RigidbodyComponent> _charPool;
 		private EcsPool<TransformComponent> _trPool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<RigidbodyComponent>().Inc<Movement>().End(4);
@@ -22,7 +22,7 @@ namespace HL.Gameplay.Features.Player.Systems
 			_trPool = _world.GetPool<TransformComponent>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

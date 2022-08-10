@@ -11,7 +11,7 @@ namespace HL.Gameplay.Features.Core.Systems
 		private EcsPool<TransformComponent> _transformsPool;
 		private EcsPool<Rotation> _rotatePool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<TransformComponent>().Inc<Rotation>().End();
@@ -19,7 +19,7 @@ namespace HL.Gameplay.Features.Core.Systems
 			_rotatePool = _world.GetPool<Rotation>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var id in _filter)
 			{

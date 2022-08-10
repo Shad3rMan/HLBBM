@@ -12,7 +12,7 @@ namespace HL.Gameplay.Features.Core.Systems
 		private EcsPool<TransformComponent> _transformsPool;
 		private EcsPool<Movement> _movePool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<TransformComponent>().Inc<Movement>().Exc<CharacterController>().End();
@@ -20,7 +20,7 @@ namespace HL.Gameplay.Features.Core.Systems
 			_movePool = _world.GetPool<Movement>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var id in _filter)
 			{

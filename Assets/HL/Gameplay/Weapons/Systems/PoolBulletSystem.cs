@@ -13,7 +13,7 @@ namespace HL.Gameplay.Weapons.Systems
 		private EcsPool<Movement> _movePool;
 		private EcsPool<Bullet> _bulletPool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<Bullet>().Inc<TimeToLive>().Exc<InPool>().End();
@@ -23,7 +23,7 @@ namespace HL.Gameplay.Weapons.Systems
 			_bulletPool = _world.GetPool<Bullet>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

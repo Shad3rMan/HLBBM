@@ -14,7 +14,7 @@ namespace HL.Gameplay.Weapons.Systems
 		private EcsPool<Weapon> _weaponPool;
 		private EcsPool<EmitBulletEvent> _emitPool;
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<Input>().Inc<Weapon>().End();
@@ -23,7 +23,7 @@ namespace HL.Gameplay.Weapons.Systems
 			_emitPool = _world.GetPool<EmitBulletEvent>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{

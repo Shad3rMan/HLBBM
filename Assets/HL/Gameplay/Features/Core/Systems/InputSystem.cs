@@ -17,14 +17,14 @@ namespace HL.Gameplay.Features.Core.Systems
 			_config = config;
 		}
 
-		public void Init(EcsSystems systems)
+		public void Init(IEcsSystems systems)
 		{
 			_world = systems.GetWorld();
 			_filter = _world.Filter<Input>().End();
 			_inputPool = _world.GetPool<Input>();
 		}
 
-		public void Run(EcsSystems systems)
+		public void Run(IEcsSystems systems)
 		{
 			foreach (var entity in _filter)
 			{
